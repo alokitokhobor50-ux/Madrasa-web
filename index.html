@@ -17,16 +17,62 @@ html{scroll-behavior:smooth;}
 body{background:#f4f4f4;}
 
 /* HEADER */
-.header{position:relative;text-align:center;color:white;}
-.header img{width:100%;height:400px;object-fit:cover;}
-.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
-.header-content{
-position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-animation:fadeIn 2s ease-in-out;
+.header{
+  position:relative;
+  text-align:center;
+  color:white;
 }
-@keyframes fadeIn{
-from{opacity:0; transform:translate(-50%,-40%);}
-to{opacity:1; transform:translate(-50%,-50%);}
+.header img.background{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+.overlay{
+  position:absolute;
+  top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:1;
+}
+/* Arabic PNG */
+.header-arabic{
+  position:absolute;
+  top:9%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:3;
+  text-align:center;
+}
+.header-arabic img{
+  max-width:90%;
+  height:auto;
+}
+/* English Title */
+.header-title{
+  position:absolute;
+  top:20%;
+  left:45%;
+  transform:translate(-50%,-45%);
+  z-index:4;
+  text-align:center;
+}
+.header-title h1{
+  color:white;
+  font-size:52px;
+  letter-spacing:1px;
+  font-weight:bold;
+  text-shadow:1px 1px 5px rgba(0,0,0,0.7);
+}
+/* Established */
+.header-established{
+  position:absolute;
+  bottom:5%;
+  left:50%;
+  transform:translateX(-50%);
+  color:white;
+  z-index:3;
+  font-size:36px;
+  font-weight:bold;
+  text-shadow:1px 1px 5px rgba(0,0,0,0.5);
 }
 
 /* NAVBAR */
@@ -65,21 +111,34 @@ footer{background:#222;color:white;padding:20px;text-align:center;}
 /* RESPONSIVE */
 @media(max-width:768px){
 .card-container{flex-direction:column;align-items:center;}
-.header img{height:300px;}
+.header img.background{height:300px;}
+.header-title h1{font-size:35px;}
+.header-established{font-size:16px;}
 }
 </style>
-
 </head>
 <body>
 
 <!-- HEADER -->
 <div class="header">
-<img src="madrasa20.jpg">
-<div class="overlay"></div>
-<div class="header-content">
-<img src="madrasa.png" style="max-width:90%; height:auto;"><br><br>
-<h3>Established in 1963</h3>
-</div>
+  <!-- Background -->
+  <img src="madrasa20.jpg" class="background" alt="Madrasa Building">
+  <div class="overlay"></div>
+  
+  <!-- Arabic PNG -->
+  <div class="header-arabic">
+    <img src="madrasa.png" alt="Arabic Name">
+  </div>
+  
+  <!-- English Title -->
+  <div class="header-title">
+    <h1>MADRASAH ASHRAFIYA RIZVIYA</h1>
+  </div>
+  
+  <!-- Established -->
+  <div class="header-established">
+    <h3>Established in 1963</h3>
+  </div>
 </div>
 
 <!-- NAVBAR -->
@@ -134,18 +193,18 @@ this institution has been spreading the light of education continuously.
 <section id="gallery">
 <h2>Photo Gallery</h2>
 <div class="gallery">
-<img src="madrasa20.jpg" alt="Madrasa Building" class="gallery-img">
-<img src="madrasastudent.jpg" alt="Students" class="gallery-img">
-<img src="madrasastudent1.jpg" alt="Student" class="gallery-img">
-<img src="madrasatic.jpg" alt="Classroom" class="gallery-img">
-<img src="ssas.jpg" alt="Event" class="gallery-img">
-<img src="madrasaraza.jpg" alt="Event" class="gallery-img">
-<img src="madrasa1.jpg" alt="Event" class="gallery-img">
-<img src="madrasa2.jpg" alt="Event" class="gallery-img">
-<img src="madrasa10.jpg" alt="Event" class="gallery-img">
-<img src="madrasafaraz.jpg" alt="Event" class="gallery-img">
-<img src="madrasafaraz1.jpg" alt="Event" class="gallery-img">
-<img src="madrasafaraz2.jpg" alt="Event" class="gallery-img">
+<img src="a.jpg" alt="Madrasa Building" class="gallery-img">
+<img src="b.jpg" alt="Students" class="gallery-img">
+<img src="c.jpg" alt="Student" class="gallery-img">
+<img src="d.jpg" alt="Classroom" class="gallery-img">
+<img src="e.jpg" alt="Event" class="gallery-img">
+<img src="f.jpg" alt="Event" class="gallery-img">
+<img src="g.jpg" alt="Event" class="gallery-img">
+<img src="h.jpg" alt="Event" class="gallery-img">
+<img src="i.jpg" alt="Event" class="gallery-img">
+<img src="j.jpg" alt="Event" class="gallery-img">
+<img src="k.jpg" alt="Event" class="gallery-img">
+<img src="l.jpg" alt="Event" class="gallery-img">
 <img src="madrasaonline.jpg" alt="Advertise" class="gallery-img">
 </div>
 </section>
@@ -174,7 +233,7 @@ Islampur, Dubrajpur, Birbhum, Pin: 731104<br>
 West Bengal, India<br><br>
 Secretary: 7029031419<br>
 President: 9434750246<br>
-Principal: 9734913217<br><br>
+T.I.C: 9734913217<br><br>
 Email: madrasaashrafiyarizviya786@gmail.com
 </p>
 </section>
@@ -201,7 +260,6 @@ close.addEventListener('click', ()=>{
   lightbox.style.display = 'none';
 });
 
-// Lightbox ক্লিক করলে বন্ধ হবে
 lightbox.addEventListener('click', (e)=>{
   if(e.target !== lightboxImg){
     lightbox.style.display='none';
