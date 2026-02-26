@@ -6,235 +6,315 @@
 <title>Madrasah Ashrafiya Rizviya</title>
 
 <style>
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
-html { scroll-behavior: smooth; }
-body { background:#f4f4f4; }
 
-
-/* NAVBAR */
-nav {
-    background: #006400;
-    padding:15px;
-    text-align:center;
-    position: sticky;
-    top:0;
-    z-index: 1000;
+body{
+background:#f4f4f4;
 }
-nav a {
-    color:white;
-    text-decoration:none;
-    margin:1/* HEADER */
-.header{position:relative;text-align:center;color:white;}
-.header img{width:100%;height:400px;object-fit:cover;}
-.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+position:relative;
+width:100%;
+height:420px;
+overflow:hidden;
+text-align:center;
+color:white;
+}
+
+.header img.background{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
 .header-content{
-position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-animation:fadeIn 2s ease-in-out;
-}
-@keyframes fadeIn{
-from{opacity:0; transform:translate(-50%,-40%);}
-to{opacity:1; transform:translate(-50%,-50%);}
-}2px;
-    font-weight:bold;
-    transition:0.3s;
-}
-nav a:hover {
-    color: yellow;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:90%;
+z-index:2;
 }
 
-/* SECTION */
-section { padding:60px 20px; text-align:center; }
-h2 { color:#006400; margin-bottom:20px; }
-
-/* CARD STYLE */
-.card-container {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-.card {
-    background:white;
-    padding:20px;
-    width:250px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.card:hover { transform: translateY(-5px); }
-
-/* NOTICE */
-.notice {
-    background:#fff3cd;
-    padding:20px;
-    border-left:5px solid orange;
-    max-width:800px;
-    margin:auto;
-    border-radius:5px;
+.header-content img{
+max-width:80%;
+height:auto;
 }
 
-/* BUTTON */
-.btn {
-    display:inline-block;
-    background:green;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:5px;
-    margin-top:15px;
-    transition:0.3s;
-}
-.btn:hover { background:#004d00; }
-
-/* PHOTO GALLERY */
-.gallery {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-    gap:12px;
-    margin-top:20px;
-}
-.gallery img {
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit: cover;
-    border-radius:10px;
-    cursor:pointer;
+.header-content h1{
+margin-top:15px;
+font-size:44px;
+letter-spacing:3px;
+text-transform:uppercase;
 }
 
-/* LIGHTBOX */
-.lightbox {
-    display:none;
-    position:fixed;
-    z-index:1001;
-    padding-top:60px;
-    left:0; top:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.9);
-}
-.lightbox-content {
-    margin:auto;
-    display:block;
-    max-width:90%;
-    max-height:80%;
-}
-.close {
-    position:absolute;
-    top:20px; right:35px;
-    color:white;
-    font-size:40px;
-    font-weight:bold;
-    cursor:pointer;
+.header-content h3{
+margin-top:10px;
+font-size:22px;
+color:#f1f1f1;
 }
 
-/* FOOTER */
-footer { background:#222; color:white; padding:20px; text-align:center; }
+/* ================= NAVBAR ================= */
 
-/* RESPONSIVE */
+nav{
+background:#006400;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:12px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+padding:60px 20px;
+text-align:center;
+}
+
+h2{
+color:#006400;
+margin-bottom:20px;
+}
+
+/* ================= CARD ================= */
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+display:inline-block;
+background:green;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:5px;
+margin-top:15px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#004d00;
+}
+
+/* ================= NOTICE ================= */
+
+.notice{
+background:#fff3cd;
+padding:20px;
+border-left:5px solid orange;
+max-width:800px;
+margin:auto;
+border-radius:5px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:12px;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+display:none;
+position:fixed;
+z-index:1001;
+padding-top:60px;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+}
+
+.lightbox-content{
+margin:auto;
+display:block;
+max-width:90%;
+max-height:80%;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:35px;
+color:white;
+font-size:40px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#222;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:768px){
-    .card-container { flex-direction: column; align-items:center; }
-    .header img.background { height:300px; }
+
+.header{
+height:300px;
+}
+
+.header-content h1{
+font-size:26px;
+}
+
+.header-content h3{
+font-size:16px;
+}
+
+.card-container{
+flex-direction:column;
+align-items:center;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
+
 <div class="header">
-<img src="a.jpg">
+<img src="a.jpg" class="background">
 <div class="overlay"></div>
+
 <div class="header-content">
-<img src="madrasa.png" style="max-width:90%; height:auto;"><br><br>
-<h3>Established in 1963</h3>
+<img src="madrasa.png">
+<h1>MADRASAH ASHRAFIYA RIZVIYA</h1>
+<h3>ESTD 1963</h3>
 </div>
 </div>
-<!-- NAVBAR -->
+
+<!-- ================= NAVBAR ================= -->
+
 <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#teachers">Teachers</a>
-    <a href="#admission">Admission</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#notice">Notice</a>
-    <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#teachers">Teachers</a>
+<a href="#admission">Admission</a>
+<a href="#gallery">Gallery</a>
+<a href="#notice">Notice</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
-    <h2>About Us</h2>
-    <p style="max-width:800px;margin:auto;">
-        Established in 1963 by Shaykhul Islam<!-- HEADER -->
-<div class="header">
-<img src="a.jpg">
-<div class="overlay"></div>
-<div class="header-content">
-<img src="madrasa.png" style="max-width:90%; height:auto;"><br><br>
-<h3>Established in 1963</h3>
-</div>
-</div> Hazrat Syed Madani Ashraf Ashrafi Al Jilani,
-        this institution has been spreading the light of education continuously.
-    </p>
+<h2>About Us</h2>
+<p style="max-width:800px;margin:auto;">
+Established in 1963, this institution has been spreading the light of education continuously.
+</p>
 </section>
 
-<!-- EDUCATION -->
+<!-- ================= EDUCATION ================= -->
+
 <section id="education">
 <h2>Education Programs</h2>
 <div class="card-container">
-    <div class="card">1 to 12 (WBBME)</div>
-    <div class="card">Nazara</div>
-    <div class="card">Hifz</div>
-    <div class="card">Qerat</div>
-    <div class="card">Fazilat</div>
-    <div class="card">Parallel Education</div>
+<div class="card">1 to 12 (WBBME)</div>
+<div class="card">Nazara</div>
+<div class="card">Hifz</div>
+<div class="card">Qerat</div>
+<div class="card">Fazilat</div>
+<div class="card">Parallel Education</div>
 </div>
 </section>
 
-<!-- TEACHERS -->
-<section id="teachers">
-<h2>Our Teachers</h2>
-<div class="card-container">
-    <div class="card">Total Teachers: 8</div>
-</div>
-</section>
+<!-- ================= GALLERY ================= -->
 
-<!-- ADMISSION -->
-<section id="admission">
-<h2>Online Admission</h2>
-<p>Click below to apply online</p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdhZKnjlkGyGeKGtdll4j77Suc2TLrbhX-qed3l9xfZAwKVHQ/viewform?usp=header" class="btn" target="_blank">Apply Now</a>
-</section>
-
-<!-- PHOTO GALLERY -->
 <section id="gallery">
 <h2>Photo Gallery</h2>
 <div class="gallery">
-    <img src="a.jpg" alt="a"class="gallery-img">
-    <img src="b.jpg" alt="b"class="gallery-img">
-    <img src="c.jpg" alt="c"class="gallery-img">
-    <img src="d.jpg" alt="d"class="gallery-img">
-    <img src="e.jpg" alt="e"class="gallery-img">
-    <img src="f.jpg" alt="f"class="gallery-img">
-    <img src="g.jpg" alt="g"class="gallery-img">
-    <img src="h.jpg" alt="h"class="gallery-img">
-    <img src="i.jpg" alt="i"class="gallery-img">
-    <img src="j.jpg" alt="j"class="gallery-img">
-    <img src="k.jpg" alt="k"class="gallery-img">
-    <img src="l.jpg" alt="l"class="gallery-img">
+<img src="a.jpg" class="gallery-img">
+<img src="b.jpg" class="gallery-img">
+<img src="c.jpg" class="gallery-img">
+<img src="d.jpg" class="gallery-img">
+<img src="e.jpg" class="gallery-img">
+<img src="f.jpg" class="gallery-img">
+<img src="g.jpg" class="gallery-img">
+<img src="h.jpg" class="gallery-img">
+<img src="i.jpg" class="gallery-img">
+<img src="j.jpg" class="gallery-img">
+<img src="k.jpg" class="gallery-img">
+<img src="l.jpg" class="gallery-img">
 </div>
 </section>
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-</div>
+<!-- ================= NOTICE ================= -->
 
-<!-- NOTICE -->
 <section id="notice">
 <h2>Notice Board</h2>
 <div class="notice">
@@ -244,49 +324,11 @@ footer { background:#222; color:white; padding:20px; text-align:center; }
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact Us</h2>
-<p>
-Islampur, Dubrajpur, Birbhum, Pin: 731104<br>
-West Bengal, India<br><br>
-Secretary: 7029031419<br>
-President: 9434750246<br>
-T.I.C: 9734913217<br><br>
-Email: madrasaashrafiyarizviya786@gmail.com
-</p>
-</section>
+<!-- ================= FOOTER ================= -->
 
 <footer>
 © 2026 Madrasah Ashrafiya Rizviya | All Rights Reserved
 </footer>
 
-<script>
-// Lightbox JS
-document.addEventListener("DOMContentLoaded", function() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const images = document.querySelectorAll('.gallery-img');
-    const close = document.querySelector('.close');
-
-    images.forEach(img => {
-        img.addEventListener('click', ()=>{
-            lightbox.style.display = 'block';
-            lightboxImg.src = img.src;
-        });
-    });
-
-    close.addEventListener('click', ()=>{
-        lightbox.style.display = 'none';
-    });
-
-    lightbox.addEventListener('click', (e)=>{
-        if(e.target !== lightboxImg){
-            lightbox.style.display='none';
-        }
-    });
-});
-</script>
-
 </body>
-</html>
+    </html>
