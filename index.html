@@ -15,47 +15,6 @@
 html { scroll-behavior: smooth; }
 body { background:#f4f4f4; }
 
-/* HEADER */
-.header {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-.header img.background {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-.overlay {
-    position: absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.6);
-}
-.header-content {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    animation: fadeIn 2s ease-in-out;
-}
-.header-content img.logo {
-    max-width: 90%;
-    height: auto;
-}
-.header-content h1 {
-    font-size: 36px;
-    color: white;
-    margin: 15px 0 5px 0;
-}
-.header-content h3 {
-    font-size: 20px;
-    color: #f1f1f1;
-}
-@keyframes fadeIn {
-    from { opacity:0; transform: translate(-50%,-40%);}
-    to { opacity:1; transform: translate(-50%,-50%);}
-}
 
 /* NAVBAR */
 nav {
@@ -69,7 +28,18 @@ nav {
 nav a {
     color:white;
     text-decoration:none;
-    margin:12px;
+    margin:1/* HEADER */
+.header{position:relative;text-align:center;color:white;}
+.header img{width:100%;height:400px;object-fit:cover;}
+.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);}
+.header-content{
+position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+animation:fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn{
+from{opacity:0; transform:translate(-50%,-40%);}
+to{opacity:1; transform:translate(-50%,-50%);}
+}2px;
     font-weight:bold;
     transition:0.3s;
 }
